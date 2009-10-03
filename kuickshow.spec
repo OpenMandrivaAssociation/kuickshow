@@ -1,7 +1,7 @@
 Summary:	A very fast and comfortable imageviewer
 Name:		kuickshow
 Version: 	0.9.1
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 Source0: 	http://fr2.rpmfind.net/linux/KDE/stable/%version/src/extragear/%name-%version-kde4.2.4.tar.bz2
 Patch0:		kuickshow-0.9.1-doc-install.patch
 License: 	GPLv2+
