@@ -1,9 +1,11 @@
+%define svn 1060448
+
 Summary:	A very fast and comfortable imageviewer
 Name:		kuickshow
-Version: 	0.9.1
-Release: 	%mkrel 2
-Source0: 	http://fr2.rpmfind.net/linux/KDE/stable/%version/src/extragear/%name-%version-kde4.2.4.tar.bz2
-Patch0:		kuickshow-0.9.1-doc-install.patch
+Version: 	0.9.2
+Release: 	%mkrel 0.%svn.2
+Source0: 	http://fr2.rpmfind.net/linux/KDE/stable/%version/src/extragear/%name-%version.%svn.tar.bz2
+Patch1:     kuickshow-0.9.2-fix-imlib-init.patch
 License: 	GPLv2+
 Group: 		Graphics
 Url: 		http://www.kde.org
@@ -16,14 +18,6 @@ Conflicts:	kde-l10n < 3.5.9-5
 %description
 KuickShow is a very fast and comfortable imageviewer.
 
-%if %mdkversion < 200900
-%post
-%update_menus
-
-%postun
-%update_menus
-%endif
-
 %files -f %name.lang
 %defattr(-,root,root)
 %_kde_bindir/*
@@ -35,8 +29,8 @@ KuickShow is a very fast and comfortable imageviewer.
 #--------------------------------------------------------------------
 
 %prep
-%setup -qn %name-%version-kde4.2.4
-%patch0 -p0
+%setup -qn %name
+%patch1 -p0
 
 %build
 %cmake_kde4
