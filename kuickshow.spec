@@ -3,7 +3,7 @@
 Summary:	A very fast and comfortable imageviewer
 Name:		kuickshow
 Version: 	0.9.2
-Release: 	%mkrel 0.%svn.3
+Release: 	%mkrel 0.%svn.4
 Source0: 	http://fr2.rpmfind.net/linux/KDE/stable/%version/src/extragear/%name-%version.%svn.tar.bz2
 Patch1:     kuickshow-0.9.2-fix-imlib-init.patch
 Patch2:     kuickshow-0.9.2-fix-composite-menu.patch
