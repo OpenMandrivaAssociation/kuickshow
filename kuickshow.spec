@@ -10,7 +10,6 @@ Patch2:     kuickshow-0.9.2-fix-composite-menu.patch
 License: 	GPLv2+
 Group: 		Graphics
 Url: 		http://www.kde.org
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: 	kdelibs4-devel
 BuildRequires:	imlib-devel
 Obsoletes: 	kdegraphics-kuickshow < 1:3.5.10-3
@@ -19,8 +18,7 @@ Conflicts:	kde-l10n < 3.5.9-5
 %description
 KuickShow is a very fast and comfortable imageviewer.
 
-%files -f %name.lang
-%defattr(-,root,root)
+%files
 %_kde_bindir/*
 %_kde_libdir/*.so
 %_kde_datadir/applications/kde4/*.desktop
@@ -39,10 +37,4 @@ KuickShow is a very fast and comfortable imageviewer.
 %make
 
 %install
-rm -rf %{buildroot}
 %{makeinstall_std} -C build
-
-%find_lang %name --with-html
-
-%clean
-rm -rf %{buildroot}
