@@ -5,7 +5,7 @@ Release: 	1
 Source0: 	http://download.kde.org/stable/%{name}/%{version}/%name-%version.tar.xz
 License: 	GPLv2+
 Group: 		Graphics
-Url: 		http://www.kde.org
+Url: 		https://www.kde.org
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core) cmake(Qt5Gui) cmake(Qt5PrintSupport) cmake(Qt5X11Extras)
 BuildRequires:	cmake(KF5DocTools) cmake(KF5I18n) cmake(KF5IconThemes) cmake(KF5Init) cmake(KF5KIO) cmake(KF5WindowSystem) cmake(KF5XmlGui)
